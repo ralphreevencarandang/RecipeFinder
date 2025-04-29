@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oldenburg&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap');
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme {
+    --font-kanit: "kanit";
+
+}
+
+@layer components{
+    .max-container{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@layer utilities{
+    .padding-x {
+        @apply sm:px-16 px-8
+    }
+    .padding-y{
+        @apply sm:py-16 py-8
+    }
+}

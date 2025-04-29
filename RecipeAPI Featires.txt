@@ -1,0 +1,98 @@
+1. Search meal by name
+www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+
+- meal id
+- Country or Area
+- Category
+- Ingredients 1 - 20
+- Instructions
+- Meal Name
+- Measure 1 - 20
+- Youtube
+- thumbnail
+
+
+2. Lookup full meal details by id
+www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+- meal id
+- Country or Area
+- Category
+- Ingredients 1 - 20
+- Instructions
+- Meal Name
+- Measure 1 - 20
+- Youtube
+- thumbnail
+
+3. Lookup a single random meal
+www.themealdb.com/api/json/v1/1/random.php
+- meal id
+- Country or Area
+- Category
+- Ingredients 1 - 20
+- Instructions
+- Meal Name
+- Measure 1 - 20
+- Youtube
+- thumbnail
+
+4. List all meal categories
+www.themealdb.com/api/json/v1/1/categories.php
+- category id
+- category
+- category Description
+- category picture
+
+5. List all Categories, Area, Ingredients
+www.themealdb.com/api/json/v1/1/list.php?c=list
+-- category name
+
+
+6. www.themealdb.com/api/json/v1/1/list.php?a=list
+-- Area Name
+www.themealdb.com/api/json/v1/1/list.php?i=list
+-- Str ingredient
+-- Str Description
+-- str Type
+
+XXXXX
+7. Filter by main ingredient
+www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
+
+- Meal name
+- Meal Thumbnail
+-idMeal
+
+6. Filter by main category
+www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+- idMeal
+- Meal name
+- Meal Thumbnail
+
+9. Filter by Area
+www.themealdb.com/api/json/v1/1/filter.php?a=Canadian
+-idMeal
+- Meal name
+- Meal Thumbnail
+
+10. *URL's match the ingredient name with an underscore for any spaces.
+
+www.themealdb.com/images/ingredients/lime.png
+www.themealdb.com/images/ingredients/lime-small.png
+www.themealdb.com/images/ingredients/lime-medium.png
+www.themealdb.com/images/ingredients/lime-large.png
+
+
+Features 
+1. Search Meal by Name
+2. Random Meal
+3 List of Catogires, Area and Ingredients (Good for displaying of (Category))
+4. Filter by Main ingredient
+5. Filter by Category
+6. Filter by Area
+7. Youtube or Watch Video
+8. Instructions
+9. Ingredients
+10. Add Favorite
+11. Sort By
+12. Dark Mode
