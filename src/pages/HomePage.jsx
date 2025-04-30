@@ -15,12 +15,11 @@ const HomePage = ()=>{
 
     return(
         <section >
-            <Header/>
             <div className="max-container flex flex-col justify-center items-center padding-x">
                 <div className="text-center max-w-3xl grid grid-col-1 gap-4 padding-y">
                     <h1 className="text-5xl font-kanit ">Dishcovery</h1>
-                    <p className="text-sm text-gray-300 py-5 break-words text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias unde, facere harum impedit excepturi porro voluptatum vel odio nisi repellat nobis eligendi perspiciatis inventore non, debitis eveniet commodi recusandae saepe.</p>
-                    <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+                    <p className="font-kanit font-light text-gray-300 py-5 break-words text-center">Dishcovery helps you explore meals by area, ingredients, and category. Discover new flavors, find what you can cook now, and explore global cuisine—all in one simple, smart platform.</p>
+                    <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder="Search ingredients"/>
                 </div>
               
                     {loading ? 

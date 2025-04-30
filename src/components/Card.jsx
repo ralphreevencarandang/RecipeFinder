@@ -4,7 +4,7 @@ const Card = ({meals:{idMeal, strMeal, strMealThumb}})=>{
 
     return (
         <div>
-            <div className="card bg-base-300 w-full shadow-sm max-h-[386px]">
+            <div className="card bg-base-300 w-full shadow-lg h-[386px]">
 
                 <figure>
                     <img

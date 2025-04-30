@@ -1,8 +1,11 @@
+import Header from "../components/Header";
+
 const CategoryPage = ()=>{
     return(
-        <>
-            Category Page
-        </>
+        <section >
+        
+            Category Page 
+        </section>
     );
 }
 
