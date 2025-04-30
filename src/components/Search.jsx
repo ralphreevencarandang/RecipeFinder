@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 
-const Search = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
+const Search = ({searchTerm, setSearchTerm}) => {
+ 
   return (
     <>
         <label className="input w-full">
@@ -23,7 +22,7 @@ const Search = () => {
                 <path d="m21 21-4.3-4.3"></path>
             </g>
             </svg>
-            <input type="search" className="grow" placeholder="Search ingredients" value={searchTerm} onChange={(e)=> setSearchTerm(e.target.value) }/>
+            <input type="search" className="grow" placeholder="Search ingredients" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}  />
             <kbd className="kbd kbd-sm">⌘</kbd>
             <kbd className="kbd kbd-sm">K</kbd>
         </label>
