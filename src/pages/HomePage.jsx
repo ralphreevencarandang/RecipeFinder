@@ -18,8 +18,8 @@ const HomePage = ()=>{
             <Header/>
             <div className="max-container flex flex-col justify-center items-center padding-x">
                 <div className="text-center max-w-3xl grid grid-col-1 gap-4 padding-y">
-                    <h1 className="text-6xl font-kanit ">Dishcovery</h1>
-                    <p className="text-sm text-gray-300 p-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias unde, facere harum impedit excepturi porro voluptatum vel odio nisi repellat nobis eligendi perspiciatis inventore non, debitis eveniet commodi recusandae saepe.</p>
+                    <h1 className="text-5xl font-kanit ">Dishcovery</h1>
+                    <p className="text-sm text-gray-300 py-5 break-words text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias unde, facere harum impedit excepturi porro voluptatum vel odio nisi repellat nobis eligendi perspiciatis inventore non, debitis eveniet commodi recusandae saepe.</p>
                     <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
                 </div>
               
