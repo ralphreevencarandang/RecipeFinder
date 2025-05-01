@@ -1,9 +1,11 @@
+import { Link } from "react-router";
+
 const Header = () => {
   return (
     <section className="shadow-sm">
-      <div className="navbar bg-base-100  max-container">
+      <div className="navbar bg-base-100  max-container padding-x ">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">Dishcovery</a>
+          <Link to="/" className="btn btn-ghost text-xl px-2">Dishcovery</Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
@@ -19,7 +21,7 @@ const Header = () => {
                     <a>Ingredients</a>
                   </li>
                   <li>
-                    <a>Area</a>
+                    <Link to='/country'>Area</Link>
                   </li>
                 </ul>
               </details>
