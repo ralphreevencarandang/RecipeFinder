@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const Card = ({meals:{idMeal, strMeal, strMealThumb}})=>{
+const Card = ({imgUrl=null, title='', description='', id})=>{
 
     return (
         <div>
@@ -8,12 +8,11 @@ const Card = ({meals:{idMeal, strMeal, strMealThumb}})=>{
 
                 <figure>
                     <img
-                    src={strMealThumb}
+                    src={imgUrl}
                     alt="Meal Thumbnail" className="object-contain" />
                 </figure>
                 <div className="card-body">
-                    <h2 className=" font-kanit text-center break-words py-2 text-lg">{strMeal}</h2>
-                
+                    <h2 className=" font-kanit text-center break-words py-2 text-lg">{title}</h2>
                     <div className="card-actions justify-center">
                         <Button/>
                     </div>
