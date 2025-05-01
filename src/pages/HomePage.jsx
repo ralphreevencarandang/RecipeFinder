@@ -26,28 +26,16 @@ const HomePage = ()=>{
 
                     ( <Spinner/>):
                     (errorMessage ? <p>{errorMessage}</p> : 
-                        data == null ? <p className="text-4xl text-center">Sorry, I can't find this ingredient. :((</p> :
+                        data.meals == null ? <p className="text-4xl text-center">Sorry, I can't find this ingredient. :((</p> :
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" >
-                                  { data.map((d, i) => 
-                                <Card  meals={d} key={i}/>
+                                  { data.meals.map((d, i) => 
+                                <Card  key={i} imgUrl={d.strMealThumb} title={d.strMeal} id={d.idMeal}/>
+                              
                                 )}
                             </div>
                         )
                     }
                     
-{/*                 
-                <div className="shadow-lg shadow-lime-400 ">
-                    <img src="https://flagcdn.com/160x120/ua.png" width="160" height="120"  alt="Ukraine" ></img>
-                </div> */}
- 
- 
- 
-
- 
- 
-
-
-  
             </div>           
         </section>
     );

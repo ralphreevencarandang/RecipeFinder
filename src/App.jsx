@@ -2,6 +2,7 @@
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFoundPage";
 import CountryPage from "./pages/CountryPage";
+import CategoryPage from "./pages/CategoryPage";
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router";
 
 import MainLayout from "./layout/MainLayout";
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<MainLayout/>}>
           <Route index element={<HomePage/>}/>
           <Route path='/country' element={<CountryPage/>}/>
+          <Route path='/category' element={<CategoryPage/>}/>
           <Route path='*' element={<NotFound/>}/>
       </Route>
     )

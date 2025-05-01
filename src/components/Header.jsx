@@ -15,7 +15,7 @@ const Header = () => {
                 <summary>Categories</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <a>Category</a>
+                    <Link to='/category'>Category</Link>
                   </li>
                   <li>
                     <a>Ingredients</a>

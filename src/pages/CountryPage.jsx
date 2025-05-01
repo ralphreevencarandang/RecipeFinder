@@ -58,7 +58,7 @@ const CountryPage = () => {
             <p className="text-4xl text-center">{errorMessage}</p>
         ) : (
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {data.filter((d) => d.strArea.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i) => (
+            {data?.meals?.filter((d) => d.strArea.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i) => (
                 <div key={i} className="shadow-lg p-5 place-items-center bg-base-300 rounded-lg cursor-pointer"   >
                     <img
                     src={`https://flagcdn.com/160x120/${areaFalgs[d.strArea]  }.png`} alt="Area Flag" className="hover:scale-115 transition duration-150 ease-in"/>
