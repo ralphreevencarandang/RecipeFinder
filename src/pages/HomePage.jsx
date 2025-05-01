@@ -26,9 +26,9 @@ const HomePage = ()=>{
 
                     ( <Spinner/>):
                     (errorMessage ? <p>{errorMessage}</p> : 
-                        data == null ? <p className="text-4xl text-center">Sorry, I can't find this ingredient. :((</p> :
+                        data.meals == null ? <p className="text-4xl text-center">Sorry, I can't find this ingredient. :((</p> :
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" >
-                                  { data.map((d, i) => 
+                                  { data.meals.map((d, i) => 
                                 <Card  meals={d} key={i}/>
                                 )}
                             </div>
