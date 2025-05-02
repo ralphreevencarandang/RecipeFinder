@@ -5,7 +5,7 @@ const Header = () => {
     <section className="shadow-sm">
       <div className="navbar bg-base-100  max-container padding-x ">
         <div className="flex-1">
-          <Link to="/" className="btn btn-ghost text-xl px-2">Dishcovery</Link>
+          <Link to="/" className="btn btn-ghost text-xl px-2 bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">Dishcovery</Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
@@ -15,11 +15,11 @@ const Header = () => {
                 <summary>Categories</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <Link to='/category'>Category</Link>
+                    <Link to='/category' className="bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">Category</Link>
                   </li>
                  
                   <li>
-                    <Link to='/country'>Country</Link>
+                    <Link to='/country' className="bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">Country</Link>
                   </li>
                 </ul>
               </details>
