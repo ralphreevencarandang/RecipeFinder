@@ -2,6 +2,8 @@ import Spinner from "../components/Spinner";
 import useFetch from "../hooks/useFetch";
 import Search from "../components/Search";
 import { useState } from "react";
+import { Link } from "react-router";
+
 const CountryPage = () => {
   const [data, loading, errorMessage] = useFetch("/list.php?a=list");
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +43,7 @@ const CountryPage = () => {
         <section className="max-container padding-x">
         <div className="mb-10  flex flex-col justify-center items-center ">
             <div className="max-w-3xl w-full">
-            <h1 className="font-kanit text-5xl  text-center py-10 max-sm:text-4xl">
+            <h1 className="font-kanit text-5xl  text-center py-10 max-sm:text-4xl bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">
                 Browse Country
             </h1>
             <p className="font-kanit font-light text-gray-300 py-5 break-words text-center">
@@ -63,8 +65,11 @@ const CountryPage = () => {
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {data?.meals?.filter((d) => d.strArea.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i) => (
                 <div key={i} className="shadow-lg p-5 place-items-center bg-base-300 rounded-lg cursor-pointer"   >
-                    <img
-                    src={`https://flagcdn.com/160x120/${areaFalgs[d.strArea]  }.png`} alt="Area Flag" className="hover:scale-115 transition duration-150 ease-in"/>
+                    <Link to={`/country-meal/${d.strArea}`}>
+                        <img
+                        src={`https://flagcdn.com/160x120/${areaFalgs[d.strArea]  }.png`} alt="Area Flag" className="hover:scale-115 transition duration-150 ease-in"/>
+                    </Link>
+                   
                     <p className="font-kanit py-3 text-2xl">{d.strArea}</p>
                 </div>
                 ))}

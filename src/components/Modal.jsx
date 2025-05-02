@@ -47,6 +47,38 @@ const Modal = ({label, idMeal}) => {
         }
     }
 
+    const areaFalgs = {
+        American: "us",
+        British: "gb",
+        Canadian: "ca",
+        Chinese: "cn",
+        Croatian: "hr",
+        Dutch: "nl",
+        Egyptian: "eg",
+        Filipino: "ph",
+        French: "fr",
+        Greek: "gr",
+        Indian: "in",
+        Irish: "ie",
+        Italian: "it",
+        Jamaican: "jm",
+        Japanese: "jp",
+        Kenyan: "ke",
+        Malaysian: "my",
+        Mexican: "mx",
+        Moroccan: "ma",
+        Polish: "pl",
+        Portuguese: "pt",
+        Russian: "ru",
+        Spanish: "es",
+        Thai: "th",
+        Tunisian: "tn",
+        Turkish: "tr",
+        Ukrainian: "ua",
+        Uruguayan: "uy",
+        Vietnamese: "vn",
+      };
+
   return (
     <>
         <button className="btn bg-blue-600 hover:bg-blue-700"  onClick={() => openModal()}>
@@ -62,9 +94,22 @@ const Modal = ({label, idMeal}) => {
                 ) : 
                 (errorMessage ? <p className="text-4xl text-center">{errorMessage}</p> :
                     <div className="">
-                            <h3 className="font-kanit text-2xl text-center py-2 font-light bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">{meal.strMeal}</h3>
+                            <h3 className="font-kanit text-4xl text-center py-2 font-light bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">{meal.strMeal}</h3>
                             <h3 className="font-kanit text-lg border-b-2 py-2 border-blue-600 font-light">Category: {meal.strCategory}</h3>
-                            <h3 className="font-kanit text-lg border-b-2 py-2 border-blue-600 font-light">Country: {meal.strArea}</h3>
+                           
+                      
+                                <h3 className="font-kanit text-lg border-b-2 py-2 border-blue-600 font-light flex gap-2 items-center">
+                                    Country: {meal.strArea} 
+                                    <span> <img src={`https://flagcdn.com/24x18/${areaFalgs[meal.strArea]  }.png`} alt="Area Flag" /></span>
+                                    
+
+                                
+                         
+                                </h3>
+                               
+                  
+                          
+                           
                             <h3 className="font-kanit text-lg border-b-2 py-2  border-blue-600 font-light">Insturctions</h3>
                             <p className="text-justify py-2 font-kanit font-light">{meal.strInstructions}</p>
                             <h3 className="font-kanit text-lg border-b-2 py-2 border-blue-600">Ingredients</h3>

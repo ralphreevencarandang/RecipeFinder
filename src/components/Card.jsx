@@ -6,7 +6,8 @@ const Card = ({
     title='', 
     description='',
     idMeal,
-    showButton=false
+    showButton=false,
+    category=''
 
 })=>{
 
@@ -19,14 +20,14 @@ const Card = ({
                     alt="Meal Thumbnail" className="object-contain" />
                 </figure>
                 <div className="card-body">
-                    <h2 className=" font-kanit text-center break-words py-2 text-lg">{title}</h2>
+                    <h2 className=" font-kanit text-center break-words py-2 text-lg ">{title}</h2>
                     <p className="font-kanit font-light text-center break-words  ">
                             {description ? `${description.slice(0,100)} ...` : '' }
                     </p>
 
                     <div className="card-actions justify-center">
-                        {/* {showButton ? <Button label='View Recipe' /> : <Link className="underline font-kanit tracking-wide">View Details</Link>} */}
-                        {<Modal label='View Recipe' idMeal={idMeal}/>}
+                        {showButton ? <Modal label='View Recipe' idMeal={idMeal}/> : <Link to={`/category-meal/${category}`} className="underline font-kanit tracking-wide text-blue-600">View Details</Link>}
+                    
                     </div>
                 </div>
             </div>
