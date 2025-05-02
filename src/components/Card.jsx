@@ -1,10 +1,11 @@
 import Button from "./Button";
 import { Link } from "react-router";
+import Modal from "./Modal";
 const Card = ({
     imgUrl=null, 
     title='', 
     description='',
-    id,
+    idMeal,
     showButton=false
 
 })=>{
@@ -22,8 +23,10 @@ const Card = ({
                     <p className="font-kanit font-light text-center break-words  ">
                             {description ? `${description.slice(0,100)} ...` : '' }
                     </p>
+
                     <div className="card-actions justify-center">
-                        {showButton ? <Button label='View Recipe'/> : <Link className="underline font-kanit tracking-wide">View Details</Link>}
+                        {/* {showButton ? <Button label='View Recipe' /> : <Link className="underline font-kanit tracking-wide">View Details</Link>} */}
+                        {<Modal label='View Recipe' idMeal={idMeal}/>}
                     </div>
                 </div>
             </div>
