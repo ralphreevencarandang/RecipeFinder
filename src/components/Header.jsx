@@ -17,11 +17,9 @@ const Header = () => {
                   <li>
                     <Link to='/category'>Category</Link>
                   </li>
+                 
                   <li>
-                    <a>Ingredients</a>
-                  </li>
-                  <li>
-                    <Link to='/country'>Area</Link>
+                    <Link to='/country'>Country</Link>
                   </li>
                 </ul>
               </details>

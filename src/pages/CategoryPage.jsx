@@ -1,27 +1,12 @@
 import Search from "../components/Search";
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
-import { useEffect } from "react";
+import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 const CategoryPage = ()=>{
 
     const [searchTerm, setSearchTerm] = useState('');
     const [data, loading, errorMessage] = useFetch('/categories.php');
-
-    // useEffect(()=>{
-    //     const fetchCategory = async ()=>{
-    //         try{
-    //             const res = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
-    //             const data = await res.json();
-
-    //             console.log(data)
-    //         }catch(error){
-    //             console.log(error);
-    //         }
-    //     }
-
-    //     fetchCategory();
-    // }, []);
     
 
     return(
@@ -31,13 +16,21 @@ const CategoryPage = ()=>{
                     <p className="font-kanit font-light text-gray-300 py-5 break-words text-center">
                         Browse meal categories to quickly find dishes that match your cravings—whether it’s breakfast, dinner, dessert, or something healthy. Easily explore recipes tailored to your taste and lifestyle
                     </p>
-                    <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder="Search ingredients"/>
+                    <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder="Search by category (eg. 'Seafood' )"/>
             </div>
 
             {loading ? (<Spinner/>) : 
                 (errorMessage ? 
                      <p className="text-4xl text-center">{errorMessage}</p> :
-                    <p>tarub</p>
+
+                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" >
+
+                        {data?.categories?.filter((d)=> d.strCategory.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i)=> 
+                            <Card key={i} imgUrl={d.strCategoryThumb} title={d.strCategory} id={d.idCategory} description={d.strCategoryDescription} />
+                        )}
+                      
+                    </div>
+                  
                 )
             }
 
