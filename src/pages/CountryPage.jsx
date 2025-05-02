@@ -44,8 +44,11 @@ const CountryPage = () => {
             <h1 className="font-kanit text-5xl  text-center py-10 max-sm:text-4xl">
                 Browse Country
             </h1>
+            <p className="font-kanit font-light text-gray-300 py-5 break-words text-center">
+            Browse meals by area to explore authentic dishes from around the world. Discover regional flavors, traditional recipes, and global cuisines—all just a click away. Taste the world from home!
+            </p>
             <Search
-                placeholder="Search country"
+                placeholder="Search by country (eg. 'Filipino' )"
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
             />
