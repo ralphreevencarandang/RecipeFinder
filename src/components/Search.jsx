@@ -5,12 +5,14 @@ const Search = ({searchTerm, setSearchTerm, placeholder=''}) => {
  
   return (
     <>
-        <label className="input w-full">
+        <label className="input w-full ">
+
             <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             >
+              
             <g
                 strokeLinejoin="round"
                 strokeLinecap="round"
@@ -23,7 +25,7 @@ const Search = ({searchTerm, setSearchTerm, placeholder=''}) => {
             </g>
             </svg>
             <input type="search" className="grow" placeholder={placeholder} onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}  />
-            <kbd className="kbd kbd-sm">⌘</kbd>
+            <kbd className="kbd kbd-sm ">⌘</kbd>
             <kbd className="kbd kbd-sm">K</kbd>
         </label>
     </>

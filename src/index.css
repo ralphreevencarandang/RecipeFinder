@@ -5,9 +5,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
     --font-kanit: "kanit";
+    --color-aliceBlue: #F0F8FF;
+    
+    
 
 }
 

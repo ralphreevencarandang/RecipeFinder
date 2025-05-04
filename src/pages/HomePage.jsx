@@ -1,10 +1,11 @@
-import Header from "../components/Header";
+
 import Search from "../components/Search";
 import Card from "../components/Card";
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { useDebounce } from "use-debounce";
 import Spinner from "../components/Spinner";
+
 
 const HomePage = ()=>{
 
@@ -13,11 +14,11 @@ const HomePage = ()=>{
     const [data, loading, errorMessage] = useFetch(`/filter.php?i=${debouncedText}`);
 
     return(
-        <section >
+        <section className=" " >
             <div className="max-container flex flex-col justify-center items-center padding-x">
                 <div className="text-center max-w-3xl grid grid-col-1 gap-4 padding-y">
                     <h1 className="text-5xl font-kanit bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent ">Dishcovery</h1>
-                    <p className="font-kanit font-light text-gray-300 py-5 break-words text-center">Dishcovery helps you explore meals by area, ingredients, and category. Discover new flavors, find what you can cook now, and explore global cuisine—all in one simple, smart platform.</p>
+                    <p className="font-kanit font-light  py-5 break-words text-center">Dishcovery helps you explore meals by area, ingredients, and category. Discover new flavors, find what you can cook now, and explore global cuisine—all in one simple, smart platform.</p>
                     <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder="Search by ingredients (eg. 'egg' )"/>
                
                 </div>

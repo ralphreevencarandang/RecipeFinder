@@ -3,10 +3,10 @@ import { Outlet } from "react-router";
 const MainLayout = ()=>{
 
     return(
-        <>
+        <section className="">
             <Header/>
             <Outlet/>
-        </>
+        </section>
     );
 
 }

@@ -23,11 +23,14 @@ const CountryMeal = ()=>{
         {loading ? 
                 ( <Spinner/>):
                 (errorMessage ? <p className="text-4xl text-center">{errorMessage}</p> : 
-                    data.meals == null ? <p className="text-4xl text-center">Sorry, I can't find this ingredient. :((</p> :
+                    
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" >
-                           {data?.meals?.filter((d)=> d.strMeal.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i)=> 
-                            <Card  key={i} imgUrl={d.strMealThumb} title={d.strMeal} idMeal={d.idMeal} showButton={true}/>
-                            )}
+                           {
+                             
+                           data?.meals?.filter((d)=> d.strMeal.toLowerCase().includes(searchTerm.toLowerCase())).map((d, i)=> 
+                                <Card  key={i} imgUrl={d.strMealThumb} title={d.strMeal} idMeal={d.idMeal} showButton={true}/>
+                            )
+                            }
                         </div>
                     )
                 }

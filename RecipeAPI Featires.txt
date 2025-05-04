@@ -1,15 +1,15 @@
 1. Search meal by name
 www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
 
-- meal id
-- Country or Area
-- Category
+- meal id X
+- Country or Area X
+- Category X
 - Ingredients 1 - 20
-- Instructions
-- Meal Name
+- Instructions X
+- Meal Name X
 - Measure 1 - 20
-- Youtube
-- thumbnail
+- Youtube X
+
 
 
 2. Lookup full meal details by id
@@ -96,3 +96,4 @@ Features
 10. Add Favorite
 11. Sort By
 12. Dark Mode
+13. List of Ingredients 
